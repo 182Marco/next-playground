@@ -11,6 +11,7 @@ interface Args {
     bg: string;
     text: string;
     col: string;
+    size: 's' | 'm' | 'l'
 }
 
 const Template = (args: Args) => <Btn {...args} />
