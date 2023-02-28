@@ -7,5 +7,20 @@ export default {
     component: Btn
 }
 
-export const HomePage = () => <Btn text="hay" col="blue" bg="red" />
+interface Args {
+    bg: string;
+    text: string;
+    col: string;
+}
+
+const Template = (args: Args) => <Btn {...args} />
+
+export const myBtn = Template.bind({})
+
+//@ts-ignore
+myBtn.args = {
+    bg: 'red',
+    text: 'something',
+    col: 'blue'
+}
 
