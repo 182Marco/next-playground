@@ -3,7 +3,7 @@ import Btn from '../components/Btn'
 
 
 export default {
-    title: "Btn",
+    title: "myComponents/Btn",
     component: Btn
 }
 
