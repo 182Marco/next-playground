@@ -1,27 +1,37 @@
+import { ComponentStory } from "@storybook/react";
 import React from "react"
 import Btn from '../components/Btn'
 
 
 export default {
     title: "myComponents/Btn",
-    component: Btn
+    component: Btn,
+    argTypes: { handleClick: {action: 'handleClick has been triggered'}}
 }
 
-interface Args {
-    bg: string;
-    text: string;
-    col: string;
-    size: 's' | 'm' | 'l'
-}
+const Template: ComponentStory<typeof Btn> = args => <Btn {...args} />
 
-const Template = (args: Args) => <Btn {...args} />
 
-export const myBtn = Template.bind({})
-
-//@ts-ignore
-myBtn.args = {
+export const red = Template.bind({})
+red.args = {
     bg: 'red',
     text: 'something',
-    col: 'blue'
+    col: 'black'
 }
+
+
+export const blue = Template.bind({})
+blue.args = {
+    bg: 'blue',
+    text: 'something',
+    col: 'black'
+}
+
+export const green = Template.bind({})
+green.args = {
+    bg: 'green',
+    text: 'something',
+    col: 'black'
+}
+
 
